@@ -24,7 +24,7 @@ public class GhostMovement : MonoBehaviour
 
     private void Path()
     {
-        if(ghost.transform.position.x-player.transform.position.x < 1 && ghost.transform.position.z - player.transform.position.z < 1)
+        if(ghost.transform.position.x-player.transform.position.x < 0.5 && ghost.transform.position.z - player.transform.position.z < 0.5)
         {
             ghost.SetDestination(player.transform.position);
         } else
