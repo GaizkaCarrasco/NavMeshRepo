@@ -18,11 +18,16 @@ public class Movement1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(agent.remainingDistance - agent.stoppingDistance == 0 && !agent.pathPending)
+        Path();
+    }
+
+    private void Path()
+    {
+        if (agent.remainingDistance - agent.stoppingDistance == 0 && !agent.pathPending)
         {
             currentGoal++;
         }
-        if(currentGoal == objetivos.Length)
+        if (currentGoal == objetivos.Length)
         {
             currentGoal = 0;
         }
